@@ -1,5 +1,7 @@
 package org.petersen;
 
+import java.io.IOException;
+
 /**
  * Personal helper robot
  *
@@ -8,7 +10,7 @@ public class Robot
 {
   private String name;
 
-  public String checkWeather() {
+  public String checkWeather() throws IOException {
     WeatherApi weatherApi = new WeatherApi();
     int currentTemperature = weatherApi.getCurrentTemperature();
     return "The current temperature is " + currentTemperature;
